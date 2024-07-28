@@ -102,7 +102,64 @@
       We get Microsoft's Kinect Senor SDK to send the video feed to work with
       the Defacto VRChat video player.
     </p>
-    <a href="#products" class="button">Join Waitlist</a>
+    <button class="button" onclick="makeConfetti()">Get Started!</button>
+    <script>
+      function makeConfetti() {
+        // Confetti effect logic here
+        const confettiContainer = document.createElement("div");
+        confettiContainer.style.position = "fixed";
+        confettiContainer.style.top = "0";
+        confettiContainer.style.left = "0";
+        confettiContainer.style.width = "100%";
+        confettiContainer.style.height = "100%";
+        confettiContainer.style.pointerEvents = "none";
+        confettiContainer.style.zIndex = "9999";
+        document.body.appendChild(confettiContainer);
+
+        const colors = [
+          "rgba(255, 0, 0, 0.7)",
+          "rgba(0, 255, 0, 0.7)",
+          "rgba(0, 0, 255, 0.7)",
+          "rgba(255, 255, 0, 0.7)",
+          "rgba(0, 255, 255, 0.7)",
+          "rgba(255, 0, 255, 0.7)",
+        ];
+
+        for (let i = 0; i < 100; i++) {
+          const confetti = document.createElement("div");
+          confetti.style.position = "absolute";
+          confetti.style.width = "10px";
+          confetti.style.height = "10px";
+          confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.top = Math.random() * 100 + "%";
+          confetti.style.left = Math.random() * 100 + "%";
+          confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+          confettiContainer.appendChild(confetti);
+
+          confetti.animate(
+            [
+              { transform: `translateY(0) rotate(${Math.random() * 360}deg)` },
+              {
+                transform: `translateY(100vh) rotate(${
+                  Math.random() * 360
+                }deg)`,
+              },
+            ],
+            {
+              duration: Math.random() * 3000 + 2000,
+              easing: "ease-out",
+              iterations: 1,
+              fill: "forwards",
+            }
+          );
+        }
+
+        setTimeout(() => {
+          document.body.removeChild(confettiContainer);
+        }, 5000);
+      }
+    </script>
     <div
       class="video-container"
       style="

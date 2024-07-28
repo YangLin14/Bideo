@@ -103,16 +103,32 @@ p {
   h1 {
     font-size: 2.5em;
   }
+  h2 {
+    font-size: 1.5em;
+  }
   p {
     font-size: 1em;
   }
   .button {
     font-size: 0.8em;
   }
+  .contact-container {
+    flex-direction: column;
+  }
+  .logo-container {
+    margin-left: 10px;
+  }
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
 }
 @media (max-width: 480px) {
   h1 {
     font-size: 2em;
+  }
+  h2 {
+    font-size: 1em;
   }
   p {
     font-size: 0.9em;
@@ -120,9 +136,11 @@ p {
   .button {
     font-size: 0.7em;
   }
-}
-@media (max-width: 768px) {
-  .contact-container {
-    flex-direction: column;
+  .logo-container {
+    margin-left: 10px;
+  }
+  .logo {
+    width: 30px;
+    height: 30px;
   }
 }

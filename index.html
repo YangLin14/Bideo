@@ -33,9 +33,42 @@
           src="images/logo.jpg"
           alt="Logo"
           class="logo"
-          style="border-radius: 50%"
+          style="border-radius: 50%; cursor: pointer"
+          onclick="document.getElementById('popup-image').style.display='block'"
         />
       </div>
+    </div>
+    <div
+      id="popup-image"
+      style="
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+      "
+      onclick="this.style.display='none'"
+    >
+      <img
+        src="images/QR.png"
+        alt="Popup Logo"
+        style="max-width: 100%; max-height: 100vh; border-radius: 10px"
+      />
+      <button
+        onclick="document.getElementById('popup-image').style.display='none'"
+        style="
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background: none;
+          border: none;
+          font-size: 1.5em;
+          cursor: pointer;
+        "
+      >
+        &times;
+      </button>
     </div>
     <div class="menu">
       <a href="#products" class="scroll-link">Products</a>

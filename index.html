@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VRChat Kinect Integration</title>
+    <title>Bideo</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +28,7 @@
   </head>
   <body>
     <div class="header">
-      <div class="logo-container">
+      <div class="logo-container" style="margin-left: 110px">
         <img src="images/logo.png" alt="Logo" class="logo" />
       </div>
     </div>
@@ -49,7 +49,7 @@
     </script>
 
     <div class="date">July 28, 2024</div>
-    <h1>Bideo Player</h1>
+    <h1>Bideo</h1>
     <p
       style="
         width: 90%;
@@ -132,14 +132,52 @@
             "
           />
           <h3>Fong-Yu (Yang) Lin</h3>
-          <p>Introduction of person 1.</p>
+          <div class="image-container">
+            <a href="https://www.linkedin.com/in/yang-12a4c/" target="_blank">
+              <img
+                src="images/linkedin.webp"
+                alt="LinkedIn"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <a href="https://github.com/YangLin14" target="_blank">
+              <img
+                src="images/github.webp"
+                alt="GitHub"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <a
+              href="#"
+              onclick="copyEmail('fongyu903@gmail.com'); alert('Email copied!'); return false;"
+            >
+              <img
+                src="images/email.png"
+                alt="Email"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <script>
+              function copyEmail(email) {
+                const el = document.createElement("textarea");
+                el.value = email;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand("copy");
+                document.body.removeChild(el);
+              }
+            </script>
+          </div>
         </div>
         <div
           style="flex: 1; margin: 10px; border-radius: 5px; text-align: center"
         >
           <img
-            src="images/Yang.png"
-            alt="Person 2"
+            src="#"
+            alt="Nicolas"
             style="
               object-fit: cover;
               width: 200px;
@@ -147,15 +185,56 @@
               border-radius: 50%;
             "
           />
-          <h3>Person 2</h3>
-          <p>Introduction of person 2.</p>
+          <h3>Nicolas Canales</h3>
+          <div class="image-container">
+            <a
+              href="https://www.linkedin.com/in/nicolas-canales-057472174/"
+              target="_blank"
+            >
+              <img
+                src="images/linkedin.webp"
+                alt="LinkedIn"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <a href="#" target="_blank">
+              <img
+                src="images/github.webp"
+                alt="GitHub"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <a
+              href="#"
+              onclick="copyEmail('#'); alert('Email copied!'); return false;"
+            >
+              <img
+                src="images/email.png"
+                alt="Email"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <script>
+              function copyEmail(email) {
+                const el = document.createElement("textarea");
+                el.value = email;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand("copy");
+                document.body.removeChild(el);
+              }
+            </script>
+          </div>
         </div>
         <div
           style="flex: 1; margin: 10px; border-radius: 5px; text-align: center"
         >
           <img
-            src="images/Yang.png"
-            alt="Person 3"
+            src="images/Caleb.jpeg"
+            alt="Caleb"
             style="
               object-fit: cover;
               width: 200px;
@@ -163,15 +242,56 @@
               border-radius: 50%;
             "
           />
-          <h3>Person 3</h3>
-          <p>Introduction of person 3.</p>
+          <h3>Caleb Onuonga</h3>
+          <div class="image-container">
+            <a
+              href="https://www.linkedin.com/in/caleb-onuonga/"
+              target="_blank"
+            >
+              <img
+                src="images/linkedin.webp"
+                alt="LinkedIn"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <a href="#" target="_blank">
+              <img
+                src="images/github.webp"
+                alt="GitHub"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <a
+              href="#"
+              onclick="copyEmail('#'); alert('Email copied!'); return false;"
+            >
+              <img
+                src="images/email.png"
+                alt="Email"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <script>
+              function copyEmail(email) {
+                const el = document.createElement("textarea");
+                el.value = email;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand("copy");
+                document.body.removeChild(el);
+              }
+            </script>
+          </div>
         </div>
         <div
           style="flex: 1; margin: 10px; border-radius: 5px; text-align: center"
         >
           <img
-            src="images/Yang.png"
-            alt="Person 4"
+            src="images/Aadil.jpeg"
+            alt="Aadil"
             style="
               object-fit: cover;
               width: 200px;
@@ -179,8 +299,49 @@
               border-radius: 50%;
             "
           />
-          <h3>Person 4</h3>
-          <p>Introduction of person 4.</p>
+          <h3>Aadil A.</h3>
+          <div class="image-container">
+            <a
+              href="https://www.linkedin.com/in/aadil-a-7515a8124/"
+              target="_blank"
+            >
+              <img
+                src="images/linkedin.webp"
+                alt="LinkedIn"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <a href="#" target="_blank">
+              <img
+                src="images/github.webp"
+                alt="GitHub"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <a
+              href="#"
+              onclick="copyEmail('#'); alert('Email copied!'); return false;"
+            >
+              <img
+                src="images/email.png"
+                alt="Email"
+                class="logo"
+                style="width: 40px; height: auto"
+              />
+            </a>
+            <script>
+              function copyEmail(email) {
+                const el = document.createElement("textarea");
+                el.value = email;
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand("copy");
+                document.body.removeChild(el);
+              }
+            </script>
+          </div>
         </div>
       </div>
     </div>

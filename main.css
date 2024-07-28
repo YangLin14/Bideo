@@ -43,6 +43,8 @@ p {
 .logo {
   width: 100px;
   height: auto;
+  position: relative;
+  top: 20px;
 }
 .header {
   display: flex;
@@ -107,7 +109,7 @@ p {
   }
   .menu a {
     margin-bottom: 10px;
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   h1 {
     font-size: 2.5em;
@@ -130,6 +132,7 @@ p {
   .logo {
     width: 60px;
     height: 60px;
+    top: 20px;
   }
 }
 @media (max-width: 480px) {
@@ -154,5 +157,6 @@ p {
   .logo {
     width: 30px;
     height: 30px;
+    top: 20px;
   }
 }

@@ -25,6 +25,65 @@
 
       gtag("config", "G-5D5YRMVWD6");
     </script>
+    <!-- Include the PayPal JavaScript SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
+
+    <!-- PayPal Button Container -->
+    <div id="paypal-button-container"></div>
+
+    <!-- PayPal Button Script -->
+    <script>
+      paypal
+        .Buttons({
+          createOrder: function (data, actions) {
+            // Capture the selected donation amount from the user
+            const donationAmount = document.querySelector(
+              'input[name="donation-amount"]:checked'
+            ).value;
+
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: donationAmount, // Use the selected donation amount
+                  },
+                },
+              ],
+            });
+          },
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+              alert(
+                "Thank you for your generous donation of $" +
+                  document.querySelector(
+                    'input[name="donation-amount"]:checked'
+                  ).value +
+                  ", " +
+                  details.payer.name.given_name +
+                  "!"
+              );
+              // Additional actions upon successful transaction
+            });
+          },
+        })
+        .render("#paypal-button-container");
+    </script>
+
+    <!-- Donation Amount Options -->
+    <div class="donation-options">
+      <h3>Select Your Donation Amount:</h3>
+      <label>
+        <input type="radio" name="donation-amount" value="9.99" checked />
+        $9.99 </label
+      ><br />
+      <label>
+        <input type="radio" name="donation-amount" value="19.99" />
+        $19.99 </label
+      ><br />
+      <label>
+        <input type="radio" name="donation-amount" value="29.99" /> $29.99
+      </label>
+    </div>
   </head>
   <body>
     <div class="header">
